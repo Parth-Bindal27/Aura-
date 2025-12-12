@@ -1,0 +1,371 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: white;
+    box-sizing: border-box;
+}
+
+body {
+    padding-top: 70px; /* navbar spacing */
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Times New Roman', serif;
+}
+
+#ind {
+    background: linear-gradient(to bottom right, #92487A, #50e3c2);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/*For Navigation*/
+#navbar {
+    width: 100%;
+    height: 60px;
+    background: rgba(0, 0, 0, 0.65);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    backdrop-filter: blur(6px);
+}
+
+#navbar #logo {
+    font-size: 26px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+#navbar a {
+    font-size: 18px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+#navbar a:hover {
+    color: #00e0ff;
+    transform: translateY(-3px);
+}
+
+/*For Content and Layout of Cards*/
+#content {
+    height: 650px;
+}
+
+.outer {
+    width: 300px;
+    height: 200px;
+    background-color: rgba(28, 25, 25, 0.76);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    border-radius: 4px;
+}
+
+.int {
+    width: 90%;
+    text-align: center;
+}
+
+.des {
+    width: 220px;
+    height: 130px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+}
+
+button {
+    width: 220px;
+    height: 25px;
+    background-color: rgb(30, 30, 134);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    margin: 10px auto 0;
+    display: block;
+    text-align: center;
+}
+
+button:hover {
+    background-color: rgb(20, 20, 100);
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-bottom: 100px;
+}
+
+/*Home Page Info*/
+#info {
+    background-color: rgba(28, 25, 25, 0.76);
+    margin: 50px 30px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/*Gallery Formating*/
+.gallery-img {
+    width: 280px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.gallery-video {
+    width: 280px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+
+/* --- GALLERY FIX & DESCRIPTION --- */
+
+/* Wrap each image/video + description */
+.gallery-item {
+    width: 280px;
+    text-align: center;
+}
+
+/* Add hover pop for images */
+.gallery-img, .gallery-video {
+    transition: transform 0.3s ease;
+}
+
+.gallery-img:hover,
+.gallery-video:hover {
+    transform: scale(1.07);
+}
+
+/* Description under images/videos */
+.desc {
+    margin-top: 6px;
+    font-size: 14px;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+/* Align items properly in row */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+/* FIX FOR GALLERY ROW */
+.one-line-row {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 25px;
+    flex-wrap: nowrap;   /* keeps all images in ONE LINE */
+    margin-bottom: 40px;
+}
+
+/* Each item box */
+.item {
+    width: 280px;
+    text-align: center;
+}
+
+.img-desc {
+    margin-top: 6px;
+    font-size: 14px;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+/* Slight hover zoom */
+.gallery-img,
+.gallery-video {
+    transition: transform 0.3s ease;
+}
+
+.gallery-img:hover,
+.gallery-video:hover {
+    transform: scale(1.05);
+}
+
+
+/*For Login and Signup*/
+.signup-box {
+    width: 350px;
+    background-color: rgba(28, 25, 25, 0.76);
+    padding: 25px;
+    margin: 100px auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.signup-box input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: none;
+    color: black;
+}
+
+/*Color Scheme*/
+.palette-box {
+    width: 220px;
+    height: 130px;
+    margin: 0 auto;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.palette-box:hover {
+    transform: scale(1.07);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.4);
+}
+
+.color {
+    flex: 1;
+}
+
+/*Support*/
+#support{
+        background-color: #6b6b6b;
+        font-family: Arial, sans-serif;
+        color: white;
+        margin: 0;
+        padding: 0;
+        }
+        .support-container {
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .support-container h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .support-sub {
+            font-size: 1.1em;
+            margin-bottom: 40px;
+        }
+
+        .support-card {
+            background-color: #444;
+            padding: 20px;
+            margin: 20px auto;
+            width: 90%;
+            max-width: 400px;
+            border-radius: 10px;
+        }
+
+        .support-card h2 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .support-card p {
+            margin-bottom: 15px;
+        }
+
+        .support-btn {
+            background-color: #1e90ff;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+
+/*Footer*/
+#footer {
+    background-color: black;
+    text-align: center;
+    width: 100%;
+    padding: 15px 0;
+}
+
+
+/* --- GALLERY FIX & DESCRIPTION ---
+
+/* Wrap each image/video + description */
+/* .gallery-item {
+    width: 280px;
+    text-align: center;
+}
+
+
+.gallery-img, .gallery-video {
+    transition: transform 0.3s ease;
+}
+
+.gallery-img:hover,
+.gallery-video:hover {
+    transform: scale(1.07);
+}
+
+
+.desc {
+    margin-top: 6px;
+    font-size: 14px;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+
+.one-line-row {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 25px;
+    flex-wrap: nowrap;   
+    margin-bottom: 40px;
+}
+
+
+.item {
+    width: 280px;
+    text-align: center;
+}
+
+.img-desc {
+    margin-top: 6px;
+    font-size: 14px;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.gallery-img,
+.gallery-video {
+    transition: transform 0.3s ease;
+}
+
+.gallery-img:hover,
+.gallery-video:hover {
+    transform: scale(1.05);
+} */
