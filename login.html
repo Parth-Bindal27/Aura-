@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aura♾️ - Login </title> 
+    <link rel="icon" type="image/x-icon" href="I1.jpg">
+
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: linear-gradient(to bottom right, #3E1E68, #50e3c2);
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+    }
+
+    /* Navbar */
+    #navbar {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: rgba(0,0,0,0.7);
+        padding: 10px 20px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #navbar a {
+        color: white;
+        margin-left: 15px;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    /* Container with beginner-style glass effect */
+    #login-container {
+        background-color: rgba(255, 255, 255, 0.2);
+        padding: 30px 20px;
+        width: 300px;
+        border-radius: 15px;
+        text-align: center;
+        border: 1px solid white;
+    }
+
+    #login-container h2 {
+        margin-bottom: 20px;
+    }
+
+    .input {
+        width: 90%;
+        padding: 10px;
+        margin: 10px 0;
+        border-radius: 5px;
+        border: none;
+        outline: none;
+    }
+
+    .error {
+        color: red;
+        font-size: 0.9em;
+    }
+
+    button {
+        width: 95%;
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+        background-color: #1e90ff;
+        color: white;
+        font-weight: bold;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #3aa0ff;
+    }
+
+    p a {
+        color: yellow;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    /* Footer */
+    #footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+        background-color: rgba(0,0,0,0.5);
+        font-size: 0.9em;
+    }
+</style>
+</head>
+<body>
+
+<div id="navbar">
+    <a href="index.html">Aura ♾️</a>
+    <div>
+        <a href="index.html">Home</a>
+        <a href="support.html">Support</a>
+        <a href="login.html">Login</a>
+    </div>
+</div>
+
+<div id="login-container">
+    <h2>Login</h2>
+    <form id="myForm">
+        <input class="input" type="email" id="email" name="email" placeholder="Email">
+        <div id="emailError" class="error"></div>
+
+        <input class="input" type="password" id="password" name="password" placeholder="Password">
+        <div id="passwordError" class="error"></div>
+
+        <button type="button" onclick="validateForm()">Login</button>
+        <p>Don’t have an account? <a href="signup.html">Sign Up</a></p>
+    </form>
+</div>
+
+<script>
+function validateForm() {
+    document.getElementById("emailError").textContent = "";
+    document.getElementById("passwordError").textContent = "";
+
+    let isValid = true;
+
+    const email = document.getElementById("email").value.trim();
+    const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    if (email === "") { 
+        document.getElementById("emailError").textContent = "Email is required.";  
+        isValid = false;
+    } else if (!emailPattern.test(email)) {
+        document.getElementById("emailError").textContent = "Invalid email format.";
+        isValid = false;
+    }
+
+    const password = document.getElementById("password").value.trim();
+    if (password === "") {
+        document.getElementById("passwordError").textContent = "Password is required.";
+        isValid = false;
+    } else if (password.length < 6) {
+        document.getElementById("passwordError").textContent = "Password must be at least 6 characters.";
+        isValid = false;
+    }
+
+    if (isValid) {
+        alert("Login successful!");
+        window.location.href = "index.html";
+    }
+}
+</script>
+
+<div id="footer">
+    Made With 🩵<br>
+    © Copyrights Reserved Aura ♾️
+</div>
+
+</body>
+</html>
