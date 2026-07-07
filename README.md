@@ -56,7 +56,7 @@ git clone https://github.com/Parth-Bindal27/Aura.git
 Open
 
 ```
-index.html
+https://aura-two-livid.vercel.app/
 ```
 
 in your browser.
@@ -78,7 +78,6 @@ in your browser.
 
 **Parth Bindal**
 
-- Aura: https://aura-two-livid.vercel.app/
 - GitHub: https://github.com/Parth-Bindal27
 - LinkedIn: https://www.linkedin.com/in/parth-bindal-2018b4381
 
